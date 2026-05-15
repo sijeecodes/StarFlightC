@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'starfont';
+    src: url('./artSrc/starfont.otf') format('opentype');
+}
+
+body {
+    font-family: 'starfont';
+    display: flex;
+    height: 100vh;
+    background: black;
+    margin: 0;
+    justify-content: center;
+}
+
+#canvas {
+    position: fixed;
+    background: black;
+    z-index: 10;
+    display: 0;
+}
+
+#gameUI {
+    display: block;
+    z-index: 10;
+}
+
+/* In game UI */
+#inGame {
+    display: block;
+    padding: 1rem 1rem 1rem 1rem;
+    z-index: 10;
+    opacity: 0
+}
+
+.gaugeBar {
+    height: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+}
+
+#hp {
+    background: linear-gradient(180deg,
+            #ccff66 0%,
+            #66ff33 50%,
+            #009900 100%);
+    width: 400px;
+}
+
+#energy {
+    background: linear-gradient(180deg,
+            #66ffff 0%,
+            #00e0ff 40%,
+            #0099ff 100%);
+    width: 200px;
+}
+
+/* Title Screen */
+#titleScreen,
+#changeShip,
+#settings,
+#instructions,
+#gameOver,
+#missionComplete,
+#pause {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+}
+
+#titleScreen {
+    opacity: 1;
+}
+
+h1 {
+    color: black;
+    font-size: 9rem;
+    text-shadow:
+        5px 5px 0 Yellow,
+        -5px -5px 0 Yellow,
+        5px -5px 0 Yellow,
+        -5px 5px 0 Yellow;
+    margin-top: 0;
+    margin-bottom: 15%;
+}
+
+h2 {
+    color: black;
+    text-shadow:
+        5px 5px 0 Yellow,
+        -5px -5px 0 Yellow,
+        5px -5px 0 Yellow,
+        -5px 5px 0 Yellow;
+    font-size: 4rem;
+    padding: 0;
+    margin: 0 auto;
+}
+
+h3 {
+    color: yellow;
+    font-size: 2.5rem;
+    padding: 0;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.titleScreenOptions,
+.changeShipOptions,
+.settingsOptions,
+.instructionsOptions,
+.gameOverOptions,
+.missionCompleteOptions,
+.pauseOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleScreenOption,
+.changeShipOption,
+.settingsOption,
+.instructionsOption,
+.gameOverOption,
+.missionCompleteOption,
+.pauseOption {
+    height: 3.5rem;
+    color: #e2e2e2;
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+    padding: 0.2rem 0;
+    margin: 0.2rem 0;
+    list-style-type: none;
+}
+
+.titleScreenOption span,
+.settingsOption span,
+.instructionsOption span,
+.gameOverOption span,
+.missionCompleteOption span,
+.pauseOption span {
+    display: inline-block;
+    transition: font-size 0.2s, color 0.2s, text-shadow 0.2s;
+}
+
+.selected span {
+    color: white;
+    font-size: 2.7rem;
+    text-shadow: 0 0 12px #eeff00,
+                 0 0 24px #fbff00;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+/* changeShip Menu */
+.changeShip {
+    text-align: center;
+}
+
+.changeShip p {
+    color: #e2e2e2;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+#shipDesc {
+    width:100%;
+    height: 6rem;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 23rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* settings Menu */
+.settingsContainer {
+    text-align: center;
+}
+
+.upDownSettings {
+    display: inline;
+    color: #e2e2e2;
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+    padding: 0.25rem 0;
+    margin: 0.25rem 0;
+}
+
+.controls {
+    color: #e2e2e2;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.controlsTable {
+    font-size: 1.4rem;
+    margin: 0 auto;
+}
+
+.controlsTable td {
+    text-align: left;
+    padding: 0.2rem 3.5rem;
+}
+
+/* instructions Menu */
+.instructionsContainer {
+    max-width: 65rem;
+}
+
+.instructionSection {
+    text-align: left;
+    margin-top: 3rem;
+}
+
+.instructionsContainer p,
+.instructionsContainer li {
+    color: #e2e2e2;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+}
+
+.instructionsOptions {
+    margin-top: 4rem;
+}
+
+.instructionsOption {
+    list-style-type: circle;
+}
+
+.tipsList {
+    padding-left: 2rem;
+}
+
+/* gameOver, missionComplete, pause Menu */
+.gameOverOptions,
+.missionCompleteOptions,
+.pauseOptions {
+    margin-top: 5rem;
+}
+
+.congrats {
+    color: #e2e2e2;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}

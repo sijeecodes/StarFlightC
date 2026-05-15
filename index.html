@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarFlight2</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./src/main.js"></script>
+</head>
+<body>
+    <div id="canvas"></div>
+    <div id="gameUI">
+        
+        <div id="inGame">
+            <div class="gaugeBar" id="hp">
+            </div>
+            <div class="gaugeBar" id="energy">
+            </div>
+        </div>
+
+        <div id="titleScreen">
+            <h1>StarFlight</h1>
+            <ul class="titleScreenOptions">
+                <li class="titleScreenOption selected" id="startGame"><span>start game</span></li>
+                <li class="titleScreenOption" id="toChangeShip"><span>change ship</span></li>
+                <li class="titleScreenOption" id="toSettings"><span>settings</span></li>
+                <li class="titleScreenOption" id="toInstructions"><span>instructions / tips</span></li>
+            </ul>
+        </div>
+
+        <div id="changeShip">
+            <h2>Change Ship</h2>
+                <div class="changeShipContainer">
+                <div class="changeShip">
+                    <h3 id="shipName">ship name</h3>
+                    <p id="shipDesc">description of the ship</p>
+                    <p>press ← or → to change your ship</p>
+                </div>
+                <ul class="changeShipOptions">
+                    <li class="changeShipOption selected" id="returnToTitle"><span>confirm ship</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="settings">
+            <h2>settings</h2>
+                <div class="settingsContainer">
+                <div class="controls">
+                    <h3>controls</h3>
+                    <table class="controlsTable">
+                        <tr><td>move up</td><td id="upKey">s or ↓</td></tr>
+                        <tr><td>move down</td><td id="downKey">w or ↑</td></tr>
+                        <tr><td>move left</td><td>a or ←</td></tr>
+                        <tr><td>move right</td><td>d or →</td></tr>
+                        <tr><td>roll left</td><td>n or c</td></tr>
+                        <tr><td>roll right</td><td>m or v</td></tr>
+                        <tr><td>boost forward</td><td>, or x</td></tr>
+                        <tr><td>fire blaster</td><td>space bar</td></tr>
+                    </table>
+                </div>
+                <ul class="settingsOptions">
+                    <li class="settingsOption" id="invertUpDown"><span>invert up/down keys: <span id="upDownSettings">inverted(default)</span></span></li>
+                    <li class="settingsOption selected" id="returnToTitle"><span>back to title</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="instructions">
+            <h2>instructions</h2>
+            <div class="instructionsContainer">
+                <section class="instructionSection">
+                    <h3>goal</h3>
+                    <p>destroy enemies while not getting destroyed.</p>
+                </section>
+                <section class="instructionSection">
+                    <h3>tips</h3>
+                    <ul class="tipsList">
+                        <li>put targets between the green aim triangles for better shots.</li>
+                        <li>use "roll" to dodge enemy attacks.<br> you won't get hit while rolling.</li>
+                        <li>boost forward to evade enemies attacking from sides <br>or pass through small enemies.</li>
+                    </ul>
+                </section>
+                <ul class="instructionsOptions">
+                    <li class="instructionsOption selected" id="returnToTitle"><span>back to title</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="gameOver">
+            <h2>game over</h2>
+            <ul class="gameOverOptions">
+                <li class="gameOverOption selected" id="returnToTitle"><span>back to title</span></li>
+            </ul>
+        </div>
+
+        <div id="missionComplete">
+            <h2>superb flight</h2>
+            <div class="congrats">
+                <p>- congratulations -</p>
+                <p>thank you for playing</p>
+            </div>
+            <ul class="missionCompleteOptions">
+                <li class="missionCompleteOption selected" id="returnToTitle"><span>back to title</span></li>
+            </ul>
+        </div>
+
+        <div id="pause">
+            <h2>paused</h2>
+            <ul class="pauseOptions">
+                <li class="pauseOption selected" id="resume"><span>resume</span></li>
+                <li class="pauseOption" id="returnToTitle"><span>back to title</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
