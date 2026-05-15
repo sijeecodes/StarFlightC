@@ -21,7 +21,12 @@ const createStarMaterial = function () {
         color: 0xffffff,
         size: 3.3,
         transparent: true,
-        map: new THREE.TextureLoader().load("artSrc/star.png"),
+        map: new THREE.TextureLoader().load(
+            "artSrc/star.png",
+            undefined,
+            undefined,
+            (err) => console.error("Star texture load failed", err)
+        ),
     });
 };
 

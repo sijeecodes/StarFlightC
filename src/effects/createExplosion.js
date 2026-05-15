@@ -8,7 +8,12 @@ const HIT_VOLUME = 0.1;
 const EXPLOSION_VOLUME = 0.4;
 
 export default function createExplosion(scene, target, type, { sprites, materials, velocities, lifetimes, rotations }) {
-    const texture = new THREE.TextureLoader().load(EXPLOSION_TEXTURE);
+    const texture = new THREE.TextureLoader().load(
+        EXPLOSION_TEXTURE,
+        undefined,
+        undefined,
+        (err) => console.error("Explosion texture load failed", err)
+    );
     const existingSprites = sprites.length;
     let count = 0;
 

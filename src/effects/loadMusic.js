@@ -2,7 +2,8 @@ export default function loadMusic() {
     const audio = new Audio("soundSrc/bgMusic.mp3");
     audio.volume = 0.5;
     audio.loop = true;
-    audio.play();
+    audio.addEventListener("error", (err) => console.error("Music load failed", err));
+    audio.play().catch((err) => console.error("Music playback failed", err));
 
     function stop() {
         audio.pause();

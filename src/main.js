@@ -52,8 +52,6 @@ function animate() {
     if (scene.gameState == "changeShip")   changeShip(scene, document, keyStates, pcObjects);
     if (scene.gameState == "settings")     settings(scene, document, keyStates);
     if (scene.gameState == "instructions") instructions(scene, document, keyStates);
-    if (scene.gameState == "instructions") instructions(scene, document, keyStates);
-    if (scene.gameState == "instructions") instructions(scene, document, keyStates);
     if (scene.gameState == "gameOver")     gameOver(scene, document, keyStates);
     if (scene.gameState == "pause")      { pause(scene, document, keyStates); return; }
     if (scene.gameState == "initiateGame") {

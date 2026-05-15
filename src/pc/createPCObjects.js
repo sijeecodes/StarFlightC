@@ -12,7 +12,12 @@ function createPCShip(shipNumber = 0) {
     const pcShip = new THREE.Group();
     const aimFrame = createAimFrame();
 
-    loader.load(pcShipData[shipNumber].src, (object) => pcShip.add(object.scene));
+    loader.load(
+        pcShipData[shipNumber].src,
+        (object) => pcShip.add(object.scene),
+        undefined,
+        (err) => console.error("Player ship model load failed", err)
+    );
     pcShip.add(aimFrame);
     initiatePCShip(pcShip, shipNumber);
 

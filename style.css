@@ -16,7 +16,6 @@ body {
     position: fixed;
     background: black;
     z-index: 10;
-    display: 0;
 }
 
 #gameUI {

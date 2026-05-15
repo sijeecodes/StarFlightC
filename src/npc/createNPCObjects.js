@@ -11,7 +11,12 @@ function createNPCObject(scene, npcObjects, { npcAIname, npcBasic, startingPosit
     const loader = new GLTFLoader();
     let obj = new THREE.Group();
 
-    loader.load(objBasic.npcGlb, (object) => obj.add(object.scene));
+    loader.load(
+        objBasic.npcGlb,
+        (object) => obj.add(object.scene),
+        undefined,
+        (err) => console.error("NPC model load failed", err)
+    );
     obj = deepCopy(obj, objBasic);
     obj.npcAI = deepCopy(obj.npcAI, npcAIData[npcAIname]);
     obj.elapsedTime = 0;
@@ -62,7 +67,7 @@ function createNPCBlaster(scene, pcPos, npc, npcBlasters) {
     if (npc.blasterColor == "violet") blasterColor = 0xbb00ff;
     if (npc.blasterColor == "blue") blasterColor = 0x00ffff;
     if (npc.blasterColor == "green") blasterColor = 0x00ff00;
-    if (npc.lasterColor == "orange") blasterColor = 0xff9900;
+    if (npc.blasterColor == "orange") blasterColor = 0xff9900;
 
     const material = new THREE.MeshBasicMaterial({
         color: blasterColor,
