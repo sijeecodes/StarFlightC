@@ -35,9 +35,16 @@ function initiateGame(
 }
 
 function reloadPCShip(scene: GameScene, pcObjects: PCObjects): void {
+    if (pcObjects.pcShip.targetMarker) {
+        const m = pcObjects.pcShip.targetMarker;
+        m.geometry.dispose();
+        (m.material as THREE.Material).dispose();
+        scene.remove(m);
+    }
     disposeObject(scene, pcObjects.pcShip);
     pcObjects.pcShip = createPCShip(scene.shipNumber);
     scene.add(pcObjects.pcShip);
+    scene.add(pcObjects.pcShip.targetMarker);
     initiatePCShip(pcObjects.pcShip, scene.shipNumber);
 }
 

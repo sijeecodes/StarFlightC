@@ -1,4 +1,4 @@
-import npcAIPattern from '../npcData/npcAIPattern';
+import { npcAIPattern } from '../npcData/createNPCData';
 import type { NPCObject } from '../../types';
 
 export default function npcAIPatternLoader(obj: NPCObject): void {

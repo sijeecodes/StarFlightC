@@ -1,5 +1,7 @@
+import * as THREE from "three";
 import disposeObject from "../../misc/disposeObject";
 import { createPCBlaster } from "../createPCObjects";
+import pcShipData from "../pcData/createPCShipData";
 import type { GameScene, PCShip, PCBlaster, KeyStates } from "../../types";
 
 export default function updatePCBlasters(
@@ -17,6 +19,14 @@ export default function updatePCBlasters(
 
     if (keyStates.blaster && blasterCoolTime == 0 && !keyStates.boost) {
         const newBlaster = createPCBlaster(pcShip);
+        if (pcShip.autoTarget) {
+            const blasterSpeed = pcShipData[pcShip.shipNumber].blaster.speed;
+            const dir = new THREE.Vector3()
+                .subVectors(pcShip.autoTarget.position, newBlaster.position)
+                .normalize()
+                .multiplyScalar(blasterSpeed);
+            newBlaster.speed = [dir.x, dir.y, dir.z];
+        }
         scene.add(newBlaster);
         pcBlasters.push(newBlaster);
         pcShip.blasterCoolTime = blasterDelay;

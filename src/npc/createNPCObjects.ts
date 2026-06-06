@@ -1,7 +1,6 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import npcBasicData from "./npcData/npcBasicData";
-import npcAIData from "./npcData/npcAIData";
+import npcAIData, { npcBasicData } from "./npcData/createNPCData";
 import updateNPCAI from "./npcAI/updateNPCAI";
 import playSound from "../effects/playSound";
 import type { GameScene, NPCObject, NPCObjects, NPCBlaster, NPCAIConfig, LevelEvent } from "../types";

@@ -1,6 +1,6 @@
 import { reloadPCShip } from "../../initiateGame";
 import selectMenu from "../util/selectMenu";
-import pcShipData from "../../pc/pcData/pcShipData";
+import pcShipData from "../../pc/pcData/createPCShipData";
 import playSound from "../../effects/playSound";
 import type { GameScene, KeyStates, PCObjects } from "../../types";
 

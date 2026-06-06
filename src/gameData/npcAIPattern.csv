@@ -1,0 +1,902 @@
+patternName,actionTime,action,value
+basicPattern,0,move,0 0 -500
+
+loopPattern,0,move,10 5 0
+,35,setRotation,pc
+,50,blaster,pc
+,70,blaster,pc
+,110,move,-10 -5 0
+,125,setRotation,pc
+,140,blaster,pc
+,160,blaster,pc
+,180,setPatternTime,0
+
+randomMove,0,randomMoveTo,-20 20 -10 10 130 160
+,50,setRotation,pc
+,70,blaster,front
+,80,blaster,front
+,100,blaster,front
+,105,setPatternTime,0
+
+charge,10,setRotation,pc
+,25,setDefaultSpeed,0 0 1
+,30,setRotation,pc
+,40,blaster,front
+,50,setRotation,pc
+,60,blaster,front
+,70,setRotation,pc
+,80,setRotation,pc
+,90,blaster,front
+,100,setRotation,pc
+,110,blaster,front
+,120,setRotation,pc
+,130,setRotation,pc
+,140,blaster,front
+,150,setRotation,pc
+,160,blaster,front
+,170,setRotation,pc
+,180,setRotation,pc
+,190,blaster,front
+,200,setRotation,pc
+,210,setRotation,pc
+,220,blaster,front
+,230,setRotation,pc
+,240,blaster,front
+,250,setRotation,pc
+
+droneIntroPattern,0,move,0 0 -500
+
+bomberIntroPattern,0,move,0 0 -500
+
+fighterIntroPattern,0,move,0 0 -500
+
+destroyerIntroPattern,0,move,0 0 -500
+
+cruiserIntroPattern,0,move,0 0 -500
+
+cruiserBossIntroPattern,0,move,0 0 -400
+
+asteroidIntroPattern,,,
+
+bossIntroPattern,0,move,0 0 -500
+
+droneBlastLoop,60,blaster,front
+,90,setPatternTime,0
+
+droneRandomMove,0,randomMoveTo,-30 30 -15 15 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,70,setRotation,pc
+,90,blaster,front
+,110,blaster,front
+,120,setRotation,pc
+,140,blaster,front
+,160,blaster,front
+,180,setPatternTime,0
+
+droneRandomMove1H,0,randomMoveTo,10 30 -15 15 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove2H,0,randomMoveTo,-30 -10 15 15 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove1Q,0,randomMoveTo,10 30 5 15 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove2Q,0,randomMoveTo,-30 -10 5 15 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove3Q,0,randomMoveTo,10 30 -15 -5 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove4Q,0,randomMoveTo,-30 -10 -15 -5 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove1hQ,0,randomMoveTo,15 30 5 15 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove2hQ,0,randomMoveTo,0 15 5 15 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove3hQ,0,randomMoveTo,-15 0 5 15 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove4hQ,0,randomMoveTo,-30 -15 5 15 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove5hQ,0,randomMoveTo,15 30 -15 -5 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove6hQ,0,randomMoveTo,0 15 -15 -5 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove7hQ,0,randomMoveTo,-15 0 -15 -5 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove8hQ,0,randomMoveTo,-30 -15 -15 -5 130 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove1HF,0,randomMoveTo,5 25 -15 15 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove2HF,0,randomMoveTo,-25 -5 -15 15 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove2QF,0,randomMoveTo,-30 -10 5 15 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove3QF,0,randomMoveTo,10 30 -15 -5 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove4QF,0,randomMoveTo,-30 -10 -15 -5 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove1hQF,0,randomMoveTo,15 30 5 15 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove2hQF,0,randomMoveTo,0 15 5 15 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove3hQF,0,randomMoveTo,-15 0 5 15 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove4hQF,0,randomMoveTo,-30 -15 5 15 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove5hQF,0,randomMoveTo,15 30 -15 -5 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove6hQF,0,randomMoveTo,0 15 -15 -5 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove7hQF,0,randomMoveTo,-15 0 -15 -5 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove8hQF,0,randomMoveTo,-30 -15 -15 -5 130 140
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove1HR,0,randomMoveTo,5 25 -15 15 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove2HR,0,randomMoveTo,-25 -5 -15 15 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove1QR,0,randomMoveTo,10 30 5 15 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove2QR,0,randomMoveTo,-30 -10 5 15 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove3QR,0,randomMoveTo,10 30 -15 -5 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove4QR,0,randomMoveTo,-30 -10 -15 -5 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove1hQR,0,randomMoveTo,15 30 5 15 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove2hQR,0,randomMoveTo,0 15 5 15 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove3hQR,0,randomMoveTo,-15 0 5 15 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove4hQR,0,randomMoveTo,-30 -15 5 15 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove5hQR,0,randomMoveTo,15 30 -15 -5 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove6hQR,0,randomMoveTo,0 15 -15 -5 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove7hQR,0,randomMoveTo,-15 0 -15 -5 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneRandomMove8hQR,0,randomMoveTo,-30 -15 -15 -5 150 160
+,20,setRotation,pc
+,30,blaster,front
+,40,blaster,front
+,50,blaster,front
+,80,setRotation,pc
+,90,blaster,front
+,100,blaster,front
+,110,blaster,front
+,130,setRotation,0 0 0
+,140,setPatternTime,0
+
+droneSortieFromR,10,move,50 -10 50
+
+droneSortieFromRAfter,10,moveTo,0 -5 150
+,20,setPatternTime,0
+
+droneSortieFromL,10,move,-50 -10 50
+
+droneSortieFromLAfter,10,moveTo,0 -5 150
+,20,setPatternTime,0
+
+bomberDefaultMoveZ,0,setDefaultSpeed,0 0 0.5
+
+bomberBlastLoop,10,blaster,pc
+,60,setPatternTime,0
+
+fighterBlastLoop,30,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove,0,randomMoveTo,-30 30 -15 15 130 160
+,20,setRotation,pc
+,40,blaster,front
+,70,setRotation,pc
+,90,blaster,front
+,120,setRotation,pc
+,150,blaster,front
+,180,setPatternTime,0
+
+fighterRandomMove1H,0,randomMoveTo,10 30 -10 10 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove2H,0,randomMoveTo,-30 -10 -10 10 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove1Q,0,randomMoveTo,10 30 5 15 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove2Q,0,randomMoveTo,-30 -10 5 15 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove3Q,0,randomMoveTo,10 30 -15 -5 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove4Q,0,randomMoveTo,-30 -10 -15 -5 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove1HR,0,randomMoveTo,10 30 -10 10 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove2HR,0,randomMoveTo,-30 -10 -10 10 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove1QR,0,randomMoveTo,10 30 5 15 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove2QR,0,randomMoveTo,-30 -10 5 15 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove3QR,0,randomMoveTo,10 30 -15 -5 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove4QR,0,randomMoveTo,-30 -10 -15 -5 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove1HF,0,randomMoveTo,10 30 -10 10 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove2HF,0,randomMoveTo,-30 -10 -10 10 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove1QF,0,randomMoveTo,10 30 5 15 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove2QF,0,randomMoveTo,-30 -10 5 15 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove3QF,0,randomMoveTo,10 30 -15 -5 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+fighterRandomMove4QF,0,randomMoveTo,-30 -10 -15 -5 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerBlastLoop,0,blaster,front
+,10,blaster,front
+,20,blaster,front
+,30,blaster,front
+,60,setPatternTime,0
+
+destroyerRandomMove,0,randomMoveTo,-15 15 -5 5 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove1H,0,randomMoveTo,5 35 -10 10 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove2H,0,randomMoveTo,-35 -5 -10 10 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove1Q,0,randomMoveTo,5 35 5 15 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove2Q,0,randomMoveTo,-35 -5 5 15 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove3Q,0,randomMoveTo,5 35 -15 -5 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove4Q,0,randomMoveTo,-35 -5 -15 -5 130 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove1HF,0,randomMoveTo,5 35 -10 10 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove2HF,0,randomMoveTo,-35 -5 -10 10 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove1QF,0,randomMoveTo,5 35 5 15 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove2QF,0,randomMoveTo,-35 -5 5 15 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove3QF,0,randomMoveTo,5 35 -15 -5 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove4QF,0,randomMoveTo,-35 -5 -15 -5 130 140
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove1HR,0,randomMoveTo,5 35 -15 15 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove2HR,0,randomMoveTo,-35 -5 -15 15 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove1QR,0,randomMoveTo,5 35 5 15 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove2QR,0,randomMoveTo,-35 -5 5 15 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove3QR,0,randomMoveTo,5 35 -15 -5 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+destroyerRandomMove4QR,0,randomMoveTo,-35 -5 -15 -5 150 160
+,20,setRotation,pc
+,40,blaster,front
+,60,blaster,front
+,80,blaster,front
+,90,setPatternTime,0
+
+cruiserDefaultMoveZ,0,setDefaultSpeed,0 0 0.5
+
+cruiserBlastLoop,80,blaster,pc
+,160,blaster,pc
+,160,setPatternTime,0
+
+bossFirstAttack,10,blaster,pc
+,30,blaster,pc
+,50,blaster,pc
+,70,blaster,pc
+,190,setPatternTime,0
+
+bossLoop,0,setRotation,pc
+,10,blaster,pc
+,20,blaster,pc
+,30,blaster,pc
+,35,setRotation,pc
+,40,blaster,pc
+,50,blaster,pc
+,60,blaster,pc
+,60,setRotation,0 0 0
+,65,randomMoveTo,-5 5 -5 5 190 200
+,125,randomMoveTo,-5 5 -5 5 190 200
+,130,setPatternTime,0
+
+bossFinalLoop,10,setRotation,0 0 0
+,30,moveTo,0 0 75
+,40,blaster,pc
+,50,blaster,pc
+,60,blaster,pc
+,70,blaster,pc
+,80,blaster,pc
+,90,blaster,pc
+,100,blaster,pc
+,110,blaster,pc
+,120,blaster,pc
+,130,blaster,pc
+,140,blaster,pc
+,150,blaster,pc
+,160,randomMoveTo,-15 15 -5 5 80 100
+,280,setPatternTime,0

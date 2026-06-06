@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { Line2 } from "three/addons/lines/Line2.js";
 
 // ── Primitive unions ──────────────────────────────────────────────────────────
 
@@ -206,6 +207,8 @@ export interface PCShip extends THREE.Group {
     energyCoolTime: number;
     energyRecharge: number;
     rolling: RollState;
+    autoTarget: NPCObject | null;
+    targetMarker: Line2;
 }
 
 // ── Runtime NPC ───────────────────────────────────────────────────────────────

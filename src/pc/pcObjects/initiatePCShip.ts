@@ -1,4 +1,4 @@
-import pcShipData from "../pcData/pcShipData";
+import pcShipData from "../pcData/createPCShipData";
 import type { PCShip } from "../../types";
 
 export default function initiatePCShip(pcShip: PCShip, shipNumber = 0): void {
@@ -11,6 +11,7 @@ export default function initiatePCShip(pcShip: PCShip, shipNumber = 0): void {
     pcShip.energyCoolTime = 0;
     pcShip.speed = [0, 0, 0];
     pcShip.rolling = false;
+    pcShip.autoTarget = null;
     pcShip.visible = true;
 
     pcShip.collisionSize    = shipData.collisionSize;

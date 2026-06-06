@@ -1,8 +1,9 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import createAimFrame from "./pcObjects/createAimFrame";
+import createTargetMarker from "./pcObjects/createTargetMarker";
 import initiatePCShip from "./pcObjects/initiatePCShip";
-import pcShipData from "./pcData/pcShipData";
+import pcShipData from "./pcData/createPCShipData";
 import playSound from "../effects/playSound";
 import type { PCShip, PCBlaster } from "../types";
 
@@ -20,6 +21,7 @@ function createPCShip(shipNumber = 0): PCShip {
         (err: unknown) => console.error("Player ship model load failed", err)
     );
     pcShip.add(aimFrame);
+    pcShip.targetMarker = createTargetMarker();
     initiatePCShip(pcShip, shipNumber);
 
     return pcShip;
@@ -60,10 +62,12 @@ function createPCBlaster(pcShip: PCShip): PCBlaster {
     blaster.rotation.copy(pcShip.rotation);
     blaster.collisionSize = blasterColiSize;
     blaster.power = blasterData.power;
-    blaster.speed = [pcShip.speed[0], pcShip.speed[1], 0];
-    blaster.speed[2] = Math.sqrt(Math.pow(blasterData.speed, 2)
-        - Math.pow(blaster.speed[0], 2)
-        - Math.pow(blaster.speed[1], 2));
+    const forward = new THREE.Vector3(0, 0, 1).applyEuler(pcShip.rotation);
+    blaster.speed = [
+        forward.x * blasterData.speed,
+        forward.y * blasterData.speed,
+        forward.z * blasterData.speed,
+    ];
 
     return blaster;
 }

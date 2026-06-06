@@ -3,6 +3,7 @@ import collisionCheck from "./collision/collisionCheck";
 import updateBackground from "./environment/updateBackground";
 import updateLevel from "./level/updateLevel";
 import updatePCObjects from "./pc/updatePCObjects";
+import updatePCAutoTarget from "./pc/pcObjects/updatePCAutoTarget";
 import updateNPCObjects from "./npc/updateNPCObjects";
 import updateExplosions from "./effects/updateExplosions";
 import updateGauge from "./ui/inGame/updateGauge";
@@ -20,6 +21,7 @@ export default function gameLogic(
     updateBackground(scene, scene.backgroundObjs);
     updateLevel(scene, npcObjects);
     updateNPCObjects(scene, pcObjects.pcShip.position, npcObjects);
+    updatePCAutoTarget(pcObjects.pcShip, npcObjects.npcs);
     updatePCObjects(scene, camera, pcObjects, keyStates);
 
     collisionCheck(scene, pcObjects, npcObjects, explosionObjects);
