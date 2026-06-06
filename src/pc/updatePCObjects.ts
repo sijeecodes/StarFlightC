@@ -43,14 +43,24 @@ const updatePCObjects = function (
     //update ship rotation based on speed
     if (!pcShip.rolling) {
         pcShip.rotation.z = -speedX / maxX / 7 * Math.PI;
-        pcShip.rotation.y = speedX / maxX / 30 * Math.PI;
-        pcShip.rotation.x = -speedY / maxY / 30 * Math.PI;
+        pcShip.rotation.y = speedX / maxX / 50 * Math.PI;
+        pcShip.rotation.x = -speedY / maxY / 50 * Math.PI;
     }
+    
+    //update camera position to follow the ship
+    const targetX = pcShip.position.x * 0.85;
+    const targetY = pcShip.position.y * 0.85 + 10;
+    camera.position.x -= (camera.position.x - targetX) * 0.1;
+    camera.position.y -= (camera.position.y - targetY) * 0.1;
 
     //update camera rotation based on ship movement speed
-    camera.rotation.z = Math.PI + speedX / maxX / 50 * Math.PI;
-    camera.rotation.y = -pcShip.position.x / 1000;
+    const prevRotZ = camera.rotation.z;
+    const targetRotZ = Math.PI + speedX / maxX / 25 * Math.PI;
+    camera.lookAt(0, 0, 700);
+
     camera.rotation.x = Math.PI - (pcShip.position.y - 50) / 1000;
+    camera.rotation.z = prevRotZ;
+    camera.rotation.z += (targetRotZ - camera.rotation.z) * 0.3;
 
     updatePCBlasters(scene, pcShip, pcBlasters, keyStates);
 };
