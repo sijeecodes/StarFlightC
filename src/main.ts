@@ -26,8 +26,10 @@ let pcObjects: PCObjects = { pcShip: createPCShip(), pcBlasters: [] };
 let npcObjects: NPCObjects = { npcs: [], npcBlasters: [] };
 let explosionObjects: ExplosionObjects = { sprites: [], materials: [], velocities: [], lifetimes: [], rotations: [] };
 const keyStates = initKeyState();
-let stopMusic: (() => void) | undefined;
+const FRAME_RATE = 1000 / 30;
 const scene = new THREE.Scene() as unknown as GameScene;
+let lastTime = 0;
+let stopMusic: (() => void) | undefined;
 scene.shipNumber = 0;
 scene.add(new THREE.Points(starGeo, createStarMaterial()));
 scene.backgroundObjs = [];
@@ -38,8 +40,13 @@ renderer.setPixelRatio(window.devicePixelRatio);
 setWindow(window, document, keyStates, camera, renderer);
 document.getElementById("canvas")!.appendChild(renderer.domElement);
 
-setInterval(animate, 1000 / 30);
-function animate(): void {
+requestAnimationFrame(animate);
+
+function animate(timestamp: number): void {
+    requestAnimationFrame(animate);
+    if (timestamp - lastTime < FRAME_RATE) return;
+
+    lastTime = timestamp - ((timestamp - lastTime) % FRAME_RATE); // drift correction
     updateStars(scene, starGeo);
     if (scene.gameState == "missionComplete") missionComplete(scene, document, keyStates);
     if (scene.gameState == "playing" || scene.gameState == "missionComplete") {
