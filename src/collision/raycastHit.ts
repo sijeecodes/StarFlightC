@@ -7,18 +7,20 @@ const HITMARK_DURATION = 15;
 const RAYCASTER_THRESHOLD = 0.01;
 const HIT_COLOR = 0xff0000;
 
+const _raycaster = new THREE.Raycaster();
+const _direction = new THREE.Vector3();
+const _vertexTemp = new THREE.Vector3();
+_raycaster.params.Mesh.threshold = RAYCASTER_THRESHOLD;
+
 export default function raycastHit(origin: Collidable, target: Hittable): boolean {
-    const raycaster = new THREE.Raycaster();
-    const direction = new THREE.Vector3();
     const vertices = getVertices(origin);
     let collided = false;
-    raycaster.params.Mesh.threshold = RAYCASTER_THRESHOLD;
 
     for (const vertex of vertices) {
-        raycaster.set(vertex, direction.subVectors(vertex, target.position).normalize());
-        raycaster.far = origin.collisionSize;
+        _raycaster.set(vertex, _direction.subVectors(vertex, target.position).normalize());
+        _raycaster.far = origin.collisionSize;
 
-        const intersects = raycaster.intersectObject(target, true);
+        const intersects = _raycaster.intersectObject(target, true);
         if (intersects.length > 0) {
             collided = true;
             break;
@@ -51,10 +53,9 @@ function getVertices(obj: Collidable): THREE.Vector3[] {
             const matrix = mesh.matrixWorld;
 
             for (let i = 0; i < position.count; i += interval) {
-                const vertex = new THREE.Vector3();
-                vertex.fromBufferAttribute(position, i);
-                vertex.applyMatrix4(matrix);
-                vertices.push(vertex);
+                _vertexTemp.fromBufferAttribute(position, i);
+                _vertexTemp.applyMatrix4(matrix);
+                vertices.push(_vertexTemp.clone());
             }
         }
     });
