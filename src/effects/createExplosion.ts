@@ -4,9 +4,15 @@ import type { GameScene, Collidable, ExplosionObjects } from "../types";
 
 const HIT_SOUND_SRC = ["soundSrc/hitSound1.mp3", "soundSrc/hitSound2.mp3"];
 const EXPLOSION_SOUND_SRC = ["soundSrc/explosion1.mp3", "soundSrc/explosion2.mp3", "soundSrc/explosion3.mp3"];
-const EXPLOSION_TEXTURE = "artSrc/fire.png";
 const HIT_VOLUME = 0.1;
 const EXPLOSION_VOLUME = 0.4;
+
+const _explosionTexture = new THREE.TextureLoader().load(
+    "artSrc/fire.png",
+    undefined,
+    undefined,
+    (err) => console.error("Explosion texture load failed", err)
+);
 
 export default function createExplosion(
     scene: GameScene,
@@ -14,12 +20,7 @@ export default function createExplosion(
     type: "hit" | "explode",
     { sprites, materials, velocities, lifetimes, rotations }: ExplosionObjects
 ): void {
-    const texture = new THREE.TextureLoader().load(
-        EXPLOSION_TEXTURE,
-        undefined,
-        undefined,
-        (err) => console.error("Explosion texture load failed", err)
-    );
+    const texture = _explosionTexture;
     const existingSprites = sprites.length;
     let count = 0;
 
